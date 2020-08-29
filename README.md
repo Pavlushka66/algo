@@ -1,2 +1,2 @@
 # algo
-Ыome tricky algorithmic challenges
+Some tricky algorithmic challenges
