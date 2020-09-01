@@ -1,9 +1,9 @@
 ﻿using System;
 using Some.Tools;
 
-namespace Some.BSTFromPreorderTraversal
+namespace Some
 {
-    public static class BSTFromPreorderTraversalRunner
+    public static class BSTFromPreorderTraversal
     {
         public static int Run(int[] input)
         {

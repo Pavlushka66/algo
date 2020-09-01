@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Some.ValidParenthesisString
+namespace Some
 {
-    public static class ValidParenthesisStringRunner
+    public static class ValidParenthesisString
     {
         public static bool Run(string input)
         {

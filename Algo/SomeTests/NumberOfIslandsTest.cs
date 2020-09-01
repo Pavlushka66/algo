@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using Some.NumberOfIslands;
+using Some;
 
-namespace SomeTests.NumberOfIslands
+namespace SomeTests
 {
     public class NumberOfIslandsTest
     {
@@ -9,7 +9,7 @@ namespace SomeTests.NumberOfIslands
         public void NullInput()
         {
             int[][] input = null;
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(0, result);
         }
 
@@ -17,7 +17,7 @@ namespace SomeTests.NumberOfIslands
         public void ZeroSizeInput()
         {
             var input = new int[0][];
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(0, result);
         }
 
@@ -28,7 +28,7 @@ namespace SomeTests.NumberOfIslands
             {
                 new int[0]
             };
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(0, result);
         }
 
@@ -44,7 +44,7 @@ namespace SomeTests.NumberOfIslands
                 new [] {0,0,0,1,1,1,1},
                 new [] {0,0,0,1,1,1,1}
             };
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(3, result);
         }
         
@@ -57,7 +57,7 @@ namespace SomeTests.NumberOfIslands
                 new [] {1,1,1},
                 new [] {1,1,1}
             };
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(1, result);
         }
         
@@ -69,7 +69,7 @@ namespace SomeTests.NumberOfIslands
                 new [] {1,0},
                 new [] {1,1}
             };
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(1, result);
         }
         
@@ -81,7 +81,7 @@ namespace SomeTests.NumberOfIslands
                 new [] {0,1},
                 new [] {1,1}
             };
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(1, result);
         }
         
@@ -93,7 +93,7 @@ namespace SomeTests.NumberOfIslands
                 new [] {1,1},
                 new [] {0,1}
             };
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(1, result);
         }
         
@@ -105,7 +105,7 @@ namespace SomeTests.NumberOfIslands
                 new [] {1,1},
                 new [] {1,0}
             };
-            var result = NumberOfIslandsRunner.Run(input);
+            var result = NumberOfIslands.Run(input);
             Assert.AreEqual(1, result);
         }
     }
