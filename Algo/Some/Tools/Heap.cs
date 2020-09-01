@@ -128,13 +128,13 @@ namespace Some.Tools
             }
         }
 
-        public T GetMin()
+        public T GetRoot()
         {
             if (Count == 0) throw new InvalidOperationException("Heap is empty");
             return _heap[0];
         }
 
-        public T ExtractDominating()
+        public T Pop()
         {
             if (Count == 0) throw new InvalidOperationException("Heap is empty");
             T ret = _heap[0];

@@ -27,7 +27,7 @@ namespace SomeTests.Tools
         {
             var sorted = new List<int>();
             while (heap.Count > 0)
-                sorted.Add(heap.ExtractDominating());
+                sorted.Add(heap.Pop());
 
             Assert.True(sorted.SequenceEqual(expected));
         }
