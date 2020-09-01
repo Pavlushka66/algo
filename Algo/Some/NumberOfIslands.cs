@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Some.NumberOfIslands
+namespace Some
 {
-    public static class NumberOfIslandsRunner
+    public static class NumberOfIslands
     {
         public static int Run(int[][] input)
         {
