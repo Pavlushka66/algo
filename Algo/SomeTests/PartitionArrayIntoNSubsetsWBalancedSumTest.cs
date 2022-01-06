@@ -5,7 +5,7 @@ using Some;
 namespace SomeTests;
 
 [TestFixture]
-public class PartitionArrayIntoNSubsetsWBalancedSumTests
+public class PartitionArrayIntoNSubsetsWBalancedSumTest
 {
     [Test]
     public void ZeroBuckets()
