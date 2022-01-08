@@ -7,7 +7,7 @@ namespace Some.Tools
 {
     // code from https://stackoverflow.com/a/13776636
     
-    public class MaxHeap<T> : Heap<T>
+    public class MaxHeap<T> : Heap<T> where T : IComparable<T>
     {
         public MaxHeap()
             : this(Comparer<T>.Default)
@@ -34,7 +34,7 @@ namespace Some.Tools
         }
     }
 
-    public class MinHeap<T> : Heap<T>
+    public class MinHeap<T> : Heap<T> where T : IComparable<T>
     {
         public MinHeap()
             : this(Comparer<T>.Default)
@@ -61,7 +61,7 @@ namespace Some.Tools
         }
     }
     
-    public abstract class Heap<T> : IEnumerable<T>
+    public abstract class Heap<T> : IEnumerable<T> where T : IComparable<T>
     {
         private const int InitialCapacity = 0;
         private const int GrowFactor = 2;
