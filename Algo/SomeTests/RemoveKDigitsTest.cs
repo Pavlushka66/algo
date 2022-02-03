@@ -14,6 +14,8 @@ public class RemoveKDigitsTest
     [TestCase("123456", 5, 1L)]
     [TestCase("11111111", 5, 111L)]
     [TestCase("11111123", 5, 111L)]
+    [TestCase("10200", 1, 200L)]
+    [TestCase("1432219", 3, 1219L)]
     public void Simple(string input, int k, long expected)
     {
         var actual = RemoveKDigits.Run(input, k);

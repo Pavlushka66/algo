@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace Some;
@@ -14,43 +14,31 @@ public static class RemoveKDigits
         if (k < 1)
             return long.Parse(input);
 
-        var result = new StringBuilder("0");
-        var i = 1;
-        var previous = int.Parse(input[0].ToString());
-        while (i < numLen)
+        var st = new Stack<int>();
+        for (var i = 0; i < numLen; ++i)
         {
             var current = int.Parse(input[i].ToString());
-            var charsLeft = numLen - (i + 1);
-            
-            Console.WriteLine($"current({current}) previous({previous}) k({k}) charsLeft({charsLeft}) result({result})");
-
-            if (charsLeft == 0)
+            while (k != 0 && st.Count != 0 && current < st.Peek())
             {
-                if (k == 1)
-                {
-                    result.Append(Math.Min(current, previous));
-                }
-                if (k == 0)
-                {
-                    result.Append(previous);
-                    result.Append(current);
-                }
+                st.Pop();
+                --k;
             }
-            else
-            {
-                if ((k == 0 || current > previous) && k <= charsLeft+1) {
-                    result.Append(previous);
-                }
-                else
-                {
-                    --k;
-                }
-            }
+            st.Push(current);
+        }
 
-            previous = current;
-            ++i;
+        for (var i = 0; i < k; i++)
+        {
+            st.Pop();
+        }
+
+        var sb = new StringBuilder(0);
+
+        var resultArray = st.ToArray();
+        for (var i = resultArray.Length - 1; i > -1; --i)
+        {
+            sb.Append(resultArray[i]);
         }
         
-        return long.Parse(result.ToString());
+        return long.Parse(sb.ToString());
     }
 }
