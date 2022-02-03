@@ -19,6 +19,8 @@ namespace SomeTests
         {
             var result = BoundaryOfBinaryTree<int>.Run(new BinaryTreeNode<int>(1));
             Assert.AreEqual(new[] {1}, result);
+            
+            Assert.That(3/2, Is.EqualTo(1));
         }
 
         [Test]

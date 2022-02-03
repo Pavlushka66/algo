@@ -6,6 +6,7 @@ public static class JumpGame
 {
     public static bool Run(int[] input, int startIndex)
     {
+        new HashSet<char> { 'q', 'e'};
         if (startIndex < 0 || startIndex >= input.Length)
             return false;
         var hasNoZero = true;
